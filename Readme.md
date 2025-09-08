@@ -17,7 +17,7 @@ The pipeline integrates GitHub as the source code repository, AWS CodePipeline f
 The setup ensures that whenever new code is pushed to GitHub, it is automatically built (if required) and deployed to Elastic Beanstalk with zero manual intervention.
 
 
-⚙️ Architecture Workflow
+📌 Architecture Flow :-
 
 1.   Developer pushes code → PHP code is committed and pushed to GitHub.
 
