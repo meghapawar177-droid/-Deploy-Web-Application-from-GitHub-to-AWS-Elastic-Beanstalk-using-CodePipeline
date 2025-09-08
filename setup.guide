@@ -27,5 +27,6 @@
 - **Build Stage (Optional)**: You can add a build step with AWS CodeBuild if your app needs compiling or testing.
 - **Deploy Stage**: Choose *Elastic Beanstalk* and select your application and environment.
 - Save and create the pipeline.
+![img_alt]()
 
 ---
