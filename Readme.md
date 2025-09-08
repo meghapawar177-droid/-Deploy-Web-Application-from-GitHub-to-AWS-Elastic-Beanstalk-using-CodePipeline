@@ -10,3 +10,9 @@ The deployment flow:
 3. **Deploy**: The application is deployed to Elastic Beanstalk automatically.
 
 ## 📂 Project Structure
+
+├── app/ # Your application source code
+├── requirements.txt # (Python example) dependencies
+├── package.json # (Node.js example) dependencies
+├── application.py # or app.js / index.js / main.java
+└── README.md
