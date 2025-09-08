@@ -19,7 +19,7 @@ The setup ensures that whenever new code is pushed to GitHub, it is automaticall
 
 📌 Architecture Flow :-
 
-======================================================================================================================
+==============================================================================================
 1.	Developer pushes code → PHP code is committed and pushed to GitHub.
 2.	Source stage (GitHub) → CodePipeline detects the change.
 3.	Pipeline automation (CodePipeline) → Fetches the updated code and passes it through optional build/test steps.
@@ -28,7 +28,7 @@ The setup ensures that whenever new code is pushed to GitHub, it is automaticall
 	![image_alt](https://github.com/meghapawar177-droid/-Deploy-Web-Application-from-GitHub-to-AWS-Elastic-Beanstalk-using-CodePipeline/blob/1d7524fa78dfe17baba81f842bfc2141a35e899f/new/eb.png)
 
 
-=========================================================================================================================
+==============================================================================================
 
 📊 Benefits
 
