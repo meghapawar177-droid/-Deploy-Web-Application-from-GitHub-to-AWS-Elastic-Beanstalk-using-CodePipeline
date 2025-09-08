@@ -9,5 +9,5 @@
 - Create a new application and environment (Web-deploy-env).
 - Select the correct platform (Node.js, Python, Java, etc.).
 - Note the **Web-deploy** and **Web-deploy-env**.
-![image_alt]()
+![image_alt](https://github.com/meghapawar177-droid/-Deploy-Web-Application-from-GitHub-to-AWS-Elastic-Beanstalk-using-CodePipeline/blob/20b2bc2aec2b6ac794e563dc685ba2df5cc202b7/new/elastic%20benstalk.png)
 
