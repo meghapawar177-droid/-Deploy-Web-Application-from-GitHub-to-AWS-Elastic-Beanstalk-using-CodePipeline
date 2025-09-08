@@ -1,1 +1,11 @@
+⚙️ Setup Steps
 
+ 1. Prepare Your Application
+- Add your application code to this repository.
+- Ensure dependencies are listed (requirements.txt, package.json, or build file depending on language).
+
+### 2. Create Elastic Beanstalk Environment
+- In the **AWS Management Console**, go to **Elastic Beanstalk**.
+- Create a new application and environment (Web-deploy-env).
+- Select the correct platform (Node.js, Python, Java, etc.).
+- Note the **Web-deploy** and **Web-deploy-env**.
