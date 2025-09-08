@@ -1,6 +1,6 @@
 ⚙️ Setup Steps
 
- 1. Prepare Your Application
+### 1. Prepare Your Application
 - Add your application code to this repository.
 - Ensure dependencies are listed (requirements.txt, package.json, or build file depending on language).
 
@@ -12,6 +12,12 @@
 ![image_alt](https://github.com/meghapawar177-droid/-Deploy-Web-Application-from-GitHub-to-AWS-Elastic-Beanstalk-using-CodePipeline/blob/ea2583554550dba9fd45f5ee3e8c7d385edf7f13/new/eb1.png)
 ![image_alt](https://github.com/meghapawar177-droid/-Deploy-Web-Application-from-GitHub-to-AWS-Elastic-Beanstalk-using-CodePipeline/blob/62645bb17be2788a7522e8285efea0878183b833/new/f_eb.png)
 ---
+
+### 3. Configure IAM Role
+ - Open **IAM Role ** in the console.
+ - Create Role (Elastic Benstalk Role).
+ - Add policies in the Role.
+ ![image_alt]()
 
 ### 3. Configure CodePipeline
 - Open **AWS CodePipeline** in the console.
