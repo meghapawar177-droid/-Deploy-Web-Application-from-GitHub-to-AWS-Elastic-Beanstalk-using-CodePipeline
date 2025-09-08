@@ -27,6 +27,9 @@ The setup ensures that whenever new code is pushed to GitHub, it is automaticall
 5.	Application Live → End users access the updated PHP application via the provided EB URL (or custom domain).
 	![image_alt](https://github.com/meghapawar177-droid/-Deploy-Web-Application-from-GitHub-to-AWS-Elastic-Beanstalk-using-CodePipeline/blob/1d7524fa78dfe17baba81f842bfc2141a35e899f/new/eb.png)
 
+
+============================================================================
+
 📊 Benefits
 
 ✅ Saves time with continuous deployment.
