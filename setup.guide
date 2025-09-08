@@ -17,7 +17,7 @@
  - Open **IAM Role ** in the console.
  - Create Role (Elastic Benstalk Role).
  - Add policies in the Role.
- ![image_alt]()
+ ![image_alt](https://github.com/meghapawar177-droid/-Deploy-Web-Application-from-GitHub-to-AWS-Elastic-Beanstalk-using-CodePipeline/blob/d5e9507b47cb0117cd3c3011a17259413d0d1ffc/new/Role.png)
 
 ### 3. Configure CodePipeline
 - Open **AWS CodePipeline** in the console.
