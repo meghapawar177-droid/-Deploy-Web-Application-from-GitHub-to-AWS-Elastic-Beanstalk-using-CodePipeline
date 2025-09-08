@@ -29,4 +29,16 @@ The setup ensures that whenever new code is pushed to GitHub, it is automaticall
 
 5.   Application Live → End users access the updated PHP application via the provided EB URL (or custom domain).
 
+
+📌 Architecture Flow :-
+
+=========================================================================
+1.	Developer pushes code → PHP code is committed and pushed to GitHub.
+2.	Source stage (GitHub) → CodePipeline detects the change.
+3.	Pipeline automation (CodePipeline) → Fetches the updated code and passes it through optional build/test steps.
+4.	Deployment stage (Elastic Beanstalk) → CodePipeline deploys the new version of the application to the Elastic Beanstalk environment.
+5.	Application Live → End users access the updated PHP application via the provided EB URL (or custom domain).
+
+
+
    
