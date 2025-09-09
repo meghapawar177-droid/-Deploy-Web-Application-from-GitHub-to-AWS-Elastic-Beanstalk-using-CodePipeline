@@ -37,6 +37,7 @@ The setup ensures that whenever new code is pushed to GitHub, it is automaticall
 ✅ Reduces errors by avoiding manual deployments.
 
 ✅ Ensures code changes are live within minutes.
+![alt text](https://github.com/meghapawar177-droid/-Deploy-Web-Application-from-GitHub-to-AWS-Elastic-Beanstalk-using-CodePipeline/blob/0db9db8353d16e917af26d3b6a3243056d7ca88e/new/final%20output.png)
 
 ✅ Provides scalability and monitoring out of the box.
 
