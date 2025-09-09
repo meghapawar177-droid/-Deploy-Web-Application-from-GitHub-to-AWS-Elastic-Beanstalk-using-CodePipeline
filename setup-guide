@@ -1,35 +1,108 @@
-⚙️ Setup Steps
+Great 👏 Since you already created an **Elastic Beanstalk environment** and connected it to **CodePipeline with GitHub**, here’s a clean **Setup Guide (README-style)** you can use for your PHP project.
 
-### 1. Prepare Your Application
-- Add your application code to this repository.
-- Ensure dependencies are listed (requirements.txt, package.json, or build file depending on language).
-
-### 2. Create Elastic Beanstalk Environment
-- In the **AWS Management Console**, go to **Elastic Beanstalk**.
-- Create a new application and environment (Web-deploy-env).
-- Select the correct platform (Node.js, Python, Java, etc.).
-- Note the **Web-deploy** and **Web-deploy-env**.
-![image_alt](https://github.com/meghapawar177-droid/-Deploy-Web-Application-from-GitHub-to-AWS-Elastic-Beanstalk-using-CodePipeline/blob/ea2583554550dba9fd45f5ee3e8c7d385edf7f13/new/eb1.png)
-![image_alt](https://github.com/meghapawar177-droid/-Deploy-Web-Application-from-GitHub-to-AWS-Elastic-Beanstalk-using-CodePipeline/blob/62645bb17be2788a7522e8285efea0878183b833/new/f_eb.png)
 ---
 
-### 3. Configure IAM Role
- - Open **IAM Role ** in the console.
- - Create Role (Elastic Benstalk Role).
- - Add policies in the Role.
- ![image_alt](https://github.com/meghapawar177-droid/-Deploy-Web-Application-from-GitHub-to-AWS-Elastic-Beanstalk-using-CodePipeline/blob/d5e9507b47cb0117cd3c3011a17259413d0d1ffc/new/Role.png)
+# 🚀 Setup Guide – Deploy PHP Web App from GitHub to AWS Elastic Beanstalk using CodePipeline
 
-### 4. Configure CodePipeline
-- Open **AWS CodePipeline** in the console.
-- Create connection to github.
-- Create a new pipeline and give it a name.
-- **Source Stage**: Choose *GitHub* and connect to this repository.
-- **Build Stage (Optional)**: You can add a build step with AWS CodeBuild if your app needs compiling or testing.
-- **Deploy Stage**: Choose *Elastic Beanstalk* and select your application and environment.
-- Save and create the pipeline.
-![img_alt](https://github.com/meghapawar177-droid/-Deploy-Web-Application-from-GitHub-to-AWS-Elastic-Beanstalk-using-CodePipeline/blob/8a11b94f3913fd67fe1b96567762c4dcc8edf14c/new/pipeline.png)
+This guide walks you through setting up a **Continuous Deployment pipeline** where a **PHP web application** is automatically deployed from **GitHub → AWS Elastic Beanstalk** using **AWS CodePipeline**.
 
-### 5. Check final output
-Refresh the page of Elastic Beanstalk.
+---
 
-![alt text](https://github.com/meghapawar177-droid/-Deploy-Web-Application-from-GitHub-to-AWS-Elastic-Beanstalk-using-CodePipeline/blob/0db9db8353d16e917af26d3b6a3243056d7ca88e/new/final%20output.png)
+## 📌 Prerequisites
+
+Before starting, make sure you have:
+
+* An **AWS account** with Elastic Beanstalk and CodePipeline access.
+* A **GitHub repository** with your PHP source code.
+* An **Elastic Beanstalk environment** already created (PHP platform).
+* A **CodePipeline** connected to your GitHub repository and Elastic Beanstalk.
+
+---
+
+## 📂 Project Structure (Recommended)
+
+```
+.
+├── public/                # Public-facing files
+│   ├── index.php          # Main entry point
+│   ├── style.css
+│   └── script.js
+├── src/                   # PHP classes, controllers, models
+│   ├── Controller.php
+│   ├── Database.php
+│   └── Helper.php
+├── vendor/                # Composer dependencies (if used)
+├── composer.json          # PHP dependencies
+├── .ebextensions/         # (Optional) EB custom configurations
+│   └── php-settings.config
+└── README.md
+```
+
+---
+
+## ⚙️ Setup Steps
+
+### 1. Upload Code to GitHub
+
+1. Commit and push your PHP project to your GitHub repository.
+2. Ensure the main entry file is **index.php** inside the root or `public/` folder.
+3. If using Composer, include `composer.json`. Elastic Beanstalk runs `composer install` automatically.
+
+---
+
+### 2. Configure Elastic Beanstalk
+
+* Open the **Elastic Beanstalk console**.
+* Verify your environment is running (e.g., `my-php-env`).
+* (Optional) If you want your app served from `public/`, configure EB with `.ebextensions/php-settings.config` to set the document root.
+
+Example (`.ebextensions/php-settings.config`):
+
+```yaml
+option_settings:
+  aws:elasticbeanstalk:container:php:phpini:
+    document_root: /public
+```
+
+---
+
+### 3. Verify CodePipeline Setup
+
+* Go to **AWS CodePipeline console**.
+* Confirm that:
+
+  * **Source stage** is connected to your GitHub repo.
+  * **Deploy stage** is set to your Elastic Beanstalk environment.
+* (Optional) Add a **Build stage** (AWS CodeBuild) if you want tests or preprocessing.
+
+---
+
+### 4. Deploy Your Application
+
+* Push changes to GitHub.
+* CodePipeline will automatically:
+
+  1. Detect the change.
+  2. Fetch code from GitHub.
+  3. Deploy it to Elastic Beanstalk.
+* Open your EB environment URL (`http://<env-name>.<region>.elasticbeanstalk.com`) to see your live app.
+
+---
+
+## ✅ Benefits of This Setup
+
+* **Zero manual deployment** → CodePipeline handles everything.
+* **Scalability** → Elastic Beanstalk auto-scales your app.
+* **Version Control** → Every GitHub push is tracked and deployed.
+* **Flexibility** → Supports PHP frameworks (Laravel, CodeIgniter, Symfony, etc.).
+
+---
+
+## 📖 References
+
+* [AWS Elastic Beanstalk – PHP Platform](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/php.html)
+* [AWS CodePipeline Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html)
+
+---
+
+👉 Do you want me to also give you a **minimal sample PHP app (`index.php`)** so you can immediately test your pipeline deployment?
